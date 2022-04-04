@@ -1,0 +1,59 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Vazir',
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.button-log{
+  background: blue;
+  color: white;
+  border-radius: 25px;
+  font-size: 15px;
+  width: 60px;
+  height: 31px;
+  transition: 0.3s;
+}
+.button-log:hover {
+  background: white;
+  color: #9b9b9b;
+  box-shadow: 1px 1px 5px blue;
+}
+.btn {
+  position: relative;
+  /* width: 200px;
+  height: 20px; */
+}
+.btn:after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 1px;
+  background: blue;
+  transition: all 0.5s;
+  bottom: 0;
+  left: 50%;
+}
+.btn:hover:after {
+  width: 100%;
+  height: 2px;
+  left: 0;
+}
+.btn {
+  outline: 0;
+  border: none;
+  font-family: 'Vazir';
+}
+.btn:hover {
+color: #0088ce !important;
+transition: all 0.5s;
+}
+
