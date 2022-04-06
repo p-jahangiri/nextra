@@ -1,13 +1,23 @@
 import * as React from "react";
 import { useState } from "react";
+import { useForm } from 'react-hook-form';
+
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Typography } from "@mui/material";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
-import { BoxContainer, ContainerForm, TextLogin } from "./stylesForm";
+import { BoxContainer, ButtonLog, ContainerForm, TextAccount, TextForgat, TextLogin,Text } from "./stylesForm";
+
+
 
 const Form = () => {
+  // const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
+  // const submitForm = (data) => {
+  //   console.log(data);
+  //   console.log(watch('id'));
+  //   save(data);
+// };
   return (
     <Box>
       <ContainerForm>
@@ -63,7 +73,6 @@ const Form = () => {
               <span
                 style={{
                   fontSize: "12px",
-
                   color: "#9b9b9b",
                   marginRight: "13px",
                 }}
@@ -72,46 +81,15 @@ const Form = () => {
                 مرا بخاطر بسپار
               </span>
             </Box>
-            <Button
-              style={{
-                width: "100%",
-                marginTop: "15px",
-                borderRadius: "10px",
-                transition: " all 0.5s",
-                background: "linear-gradient(90deg, #8f48ff, #1d5aff)",
-              }}
-              variant="contained"
-            >
-              {" "}
-              وارد شوید{" "}
-            </Button>
+            <ButtonLog>
+              وارد شوید
+            </ButtonLog>
             <Box>
-              <Typography
-                className="btn"
-                style={{
-                  fontSize: "13px",
-                  marginTop: "25px",
-                  width: "170px",
-                  marginLeft: "110px",
-                }}
-              >
-                {" "}
-                گذرواژه خود را فراموش کرده اید؟{" "}
-              </Typography>
-              <Typography
-                style={{
-                  marginLeft: "110px",
-                  fontSize: "12px",
-                  marginTop: "5px",
-                }}
-              >
-                {" "}
+            <TextForgat className="btn">گذرواژه خود را فراموش کرده اید؟</TextForgat>
+              <TextAccount >
                 هنوز حساب کاربری ندارید؟
-                <span className="btn" style={{ fontSize: "13px" }}>
-                  {" "}
-                  ثبت نام کنید
-                </span>
-              </Typography>
+               <Text className="btn">ثبت نام کنید</Text>
+              </TextAccount>
             </Box>
           </BoxContainer>
         </Box>
