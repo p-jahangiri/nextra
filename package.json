@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
+    "@material-ui/lab": "^4.0.0-alpha.61",
     "@mui/material": "^5.5.3",
     "@mui/styles": "^5.5.3",
     "@types/styled-components": "^5.1.24",

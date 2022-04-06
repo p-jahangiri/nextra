@@ -52,6 +52,12 @@ export const TextAccount = styled.div`
   margin-top: 5px;
 `;
 export const Text = styled.span`
-color: #000 !important;
-cursor: pointer;
+  color: #000 !important;
+  cursor: pointer;
+`;
+export const CheckSpan = styled.span`
+  font-size: 12px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.87);
+  margin-right: 13px;
 `;
