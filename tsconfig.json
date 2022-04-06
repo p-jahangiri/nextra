@@ -13,8 +13,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    //   "paths": {
+    //     "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
+      
+    //  },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
+  // "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
 }

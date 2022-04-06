@@ -12,25 +12,14 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: "Vazir" !important ;
 }
-.button-log{
-  background: blue;
-  color: white;
-  border-radius: 25px;
-  font-size: 15px;
-  width: 60px;
-  height: 31px;
-  transition: 0.3s;
-}
-.button-log:hover {
-  background: white;
-  color: #9b9b9b;
-  box-shadow: 1px 1px 5px blue;
-}
+
 .btn {
   position: relative;
-  /* width: 200px;
-  height: 20px; */
+  outline: 0;
+  border: none;
+  font-family: 'Vazir';
 }
 .btn:after {
   content: "";
@@ -47,13 +36,15 @@ a {
   height: 2px;
   left: 0;
 }
-.btn {
-  outline: 0;
-  border: none;
-  font-family: 'Vazir';
-}
+
 .btn:hover {
-color: #0088ce !important;
+color: hsl(210, 2%, 18%) !important;
 transition: all 0.5s;
 }
 
+/* .butt-hov:hover {
+  transition: all 0.5s !important;
+ background: #0088ce !important;
+} */
+
+ /* color: #5e5b5b; */
