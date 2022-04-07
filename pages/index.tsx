@@ -12,7 +12,6 @@ const Home: NextPage = () => {
         <link rel="preconnect" href="//v1.fontapi.ir" />
         <link href="https://v1.fontapi.ir/css/Vazir" rel="stylesheet" />
       </Head>
-
       <Index />
     </div>
   );

@@ -6,7 +6,7 @@ export const Slider = styled.div`
   justify-content: center;
   height: 750px;
   margin-left: 200px;
-  margin-right:60px ;
+  margin-right:200px ;
   padding: 0px 30px;
 `;
 export const SliderItem = styled.div`
