@@ -25,7 +25,7 @@ export const TextLogin = styled.div`
   margin-left: 180px;
   border-bottom: 1px solid black;
   @media (max-width: 768px) {
-    margin: 40px 0px;
+    margin: 60px 0px 40px 0px;
     margin-left: 120px;
     font-size: 1.5rem;
     width: 48px;

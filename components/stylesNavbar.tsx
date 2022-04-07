@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const Images = styled.img`
   margin-top: 100px;
   width: 48rem;
+  @media (max-width: 992px) {
+    width: 22rem;
+    margin-top: 300px;
+  }
   @media (max-width: 768px) {
     display: none;
   }
@@ -14,9 +18,12 @@ export const AppNavbar = styled.div`
   position: static;
   color: inherit;
   direction: rtl;
+  @media (max-width: 992px) {
+    padding: 0px 50px;
+  }
   @media (max-width: 768px) {
     padding: 0px 0px;
-  }
+  } ;
 `;
 
 export const ContainerNavbar = styled.div({
@@ -56,6 +63,7 @@ export const Hr = styled.hr`
 `;
 export const ButtonLogin = styled.button`
   margin-right: 20px;
+  cursor: pointer;
   background: #1d5aff;
   color: white;
   border-radius: 25px;
