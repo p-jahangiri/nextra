@@ -19,12 +19,19 @@ interface IFormInputs {
   TextField: string;
   Email: string;
   Password: any;
-  errors: any;
 }
 
 const Form = () => {
-  const { handleSubmit, control, formState: { errors } } = useForm<IFormInputs>();
-  const onSubmit: SubmitHandler<IFormInputs> = (data) => console.log(data);
+ 
+  const {
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm<IFormInputs>();
+  const onSubmit: SubmitHandler<IFormInputs> = (data) => {
+    console.log(data);
+    alert("ایمیل شما " + data.Email + "\n" + "رمز عبور شما " + data.Password);
+  };
 
   return (
     <Box>
@@ -37,12 +44,11 @@ const Form = () => {
                 name="Email"
                 control={control}
                 rules={{ required: true }}
-                // {errors.Email?.type === 'required' && "First name is required"}
                 render={({ field }) => (
                   <TextField
                     sx={{
                       "& label": {
-                        marginLeft: "90%",
+                        marginLeft: "91%",
                         fontSize: "14px",
                         "&.Mui-focused": {
                           marginLeft: "93%",
@@ -52,12 +58,22 @@ const Form = () => {
                     type="email"
                     label="ایمیل"
                     variant="standard"
-                    style={{ width: "100%", marginBottom: "20px" }}
+                    style={{ width: "100%" }}
                     {...field}
                   />
                 )}
-                
               />
+              {errors.Email && errors.Email.type === "required" && (
+                <span
+                  style={{
+                    color: "red",
+                    fontSize: "10px",
+                  }}
+                >
+                  ایمیل اشتباه است
+                </span>
+              )}
+              <br />
               <br />
               <Controller
                 name="Password"
@@ -67,7 +83,7 @@ const Form = () => {
                   <TextField
                     sx={{
                       "& label": {
-                        marginLeft: "90%",
+                        marginLeft: "91%",
                         fontSize: "14px",
                         "&.Mui-focused": {
                           marginLeft: "93%",
@@ -77,15 +93,25 @@ const Form = () => {
                     type="password"
                     label="گذرواژه"
                     variant="standard"
-                    style={{ width: "100%",marginBottom: "10px" }}
+                    style={{ width: "100%" }}
                     {...field}
                   />
                 )}
-              />{" "}
+              />
+              {errors.Password && errors.Password.type === "required" && (
+                <span
+                  style={{
+                    color: "red",
+                    fontSize: "11px",
+                  }}
+                >
+                  گذرواژه اشتباه است
+                </span>
+              )}
               <Box dir="rtl" style={{ textAlign: "initial" }}>
                 <Checkbox
                   size="small"
-                  style={{ margin: "-20px" }}
+                  style={{ margin: "-15px -13px" }}
                   inputProps={{ "aria-label": "controlled" }}
                 />
                 <CheckSpan>مرا به خاطر بسپار</CheckSpan>
@@ -93,8 +119,13 @@ const Form = () => {
               <ButtonLog type="submit">وارد شوید</ButtonLog>
             </form>
             <Box>
-              <TextForgat className="btn"> گذرواژه خود را فراموش کرده اید؟ </TextForgat>
-              <TextAccount> هنوز حساب کاربری ندارید؟
+              <TextForgat className="btn">
+                {" "}
+                گذرواژه خود را فراموش کرده اید؟{" "}
+              </TextForgat>
+              <TextAccount>
+                {" "}
+                هنوز حساب کاربری ندارید؟
                 <Text className="btn">ثبت نام کنید</Text>
               </TextAccount>
             </Box>

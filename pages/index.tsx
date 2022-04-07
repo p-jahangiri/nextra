@@ -3,6 +3,7 @@ import Head from "next/head";
 import Form from "../components/Form";
 import Navbar from "../components/Navbar";
 import Box from "@mui/material/Box";
+import { Images } from "../components/stylesNavbar";
 
 const Home: NextPage = () => {
   return (
@@ -16,10 +17,9 @@ const Home: NextPage = () => {
         <link href="https://v1.fontapi.ir/css/Vazir" rel="stylesheet" />
       </Head>
       <Navbar />
-
       <Box display="flex">
         <Box>
-          <img style={{ marginTop: "90px" }} src="/background.svg" />
+          <Images src="/background.svg" alt="background"></Images>
         </Box>
         <Box style={{ flex: "100%" }}>
           <Form />

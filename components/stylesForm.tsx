@@ -10,15 +10,26 @@ export const BoxContainer = styled.div`
   text-aline: center;
   width: 400px;
   margin-left: 20px;
+  @media (max-width: 768px) {
+    margin-top: 100px;
+    width: 100%;
+    margin-left: 0px;
+  }
 `;
 export const TextLogin = styled.div`
   width: 60px;
-  margin: 80px 0px;
+  margin: 80px 0px 70px 0px;
   font-size: 1.8rem;
   color: black;
   justify-content: center;
   margin-left: 180px;
   border-bottom: 1px solid black;
+  @media (max-width: 768px) {
+    margin: 40px 0px;
+    margin-left: 120px;
+    font-size: 1.5rem;
+    width: 48px;
+  }
 `;
 export const TextForm = styled.div`
   width: 100%;
@@ -45,11 +56,17 @@ export const TextForgat = styled.h6`
   margin-left: 120px;
   color: #000;
   margin-bottom: -2px;
+  @media (max-width: 768px) {
+    margin-left: 80px;
+  }
 `;
 export const TextAccount = styled.div`
   margin-left: 110px;
   font-size: 12px;
   margin-top: 5px;
+  @media (max-width: 768px) {
+    margin-left: 65px;
+  }
 `;
 export const Text = styled.span`
   color: #000 !important;
