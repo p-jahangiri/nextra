@@ -1,12 +1,6 @@
-
 import { ActionAreaCard } from "./ActionAreaCard";
 
-import {
-  Slider,
-  SliderItem,
-  Title,
-  TextTitle,
-} from "./style";
+import { Slider, SliderItem, Title, TextTitle } from "./style";
 
 import { DataTitle, DataCard } from "../static/staticData";
 import { useKeenSlider } from "keen-slider/react";
